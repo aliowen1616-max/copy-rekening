@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salin Nomor Rekening</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f9fafb;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1e40af;
+    }
+  </style>
+</head>
+<body>
+  <button id="copyBtn">📋 Salin Nomor Rekening</button>
+
+  <script>
+    const textToCopy = "1620006873289";
+    document.getElementById("copyBtn").addEventListener("click", () => {
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert("Nomor rekening disalin: " + textToCopy);
+      });
+    });
+  </script>
+</body>
+</html>
